@@ -1,0 +1,10 @@
+{
+  "Technique_Name": "Construction",
+  "Rarity": "Grade 3",
+  "Has_Domain": false,
+  "Domain_Name": null,
+  "skills": ["Create"],
+  "Skill_Cost": [100],
+  "Cursed_Energy_Trait_Exist": false,
+  "Cursed_Energy_Trait": null
+}

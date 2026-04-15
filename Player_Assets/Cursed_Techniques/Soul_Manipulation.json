@@ -1,0 +1,10 @@
+{
+  "Technique_Name": "Soul Manipulation",
+  "Rarity": "Special Grade",
+  "Has_Domain": true,
+  "Domain_Name": "Self-Embodiment of Perfection",
+  "skills": ["Idle Transfiguration"],
+  "Skill_Cost": [35],
+  "Cursed_Energy_Trait_Exist": false,
+  "Cursed_Energy_Trait": null
+}
