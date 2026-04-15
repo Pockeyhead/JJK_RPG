@@ -1,0 +1,9 @@
+{
+  "Technique_Name": "Mythical Beast Amber",
+  "Rarity": "Special Grade",
+  "Has_Domain": false,
+  "skills": ["Focused Shock"],
+  "Skill_Cost": [10],
+  "Cursed_Energy_Trait_Exist": true,
+  "Cursed_Energy_Trait": ["Bypass All Block", "Deal Stun"]
+}
