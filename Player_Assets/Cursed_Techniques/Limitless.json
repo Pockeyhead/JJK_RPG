@@ -1,0 +1,9 @@
+{
+  "Technique_Name": "Limitless",
+  "Rarity": "Special Grade",
+  "Has_Domain": false,
+  "skills": ["Lapse Blue", "Reversal Red", "Azure Fist"],
+  "Skill_Cost": [20, 20, 20],
+  "Cursed_Energy_Trait_Exist": true,
+  "Cursed_Energy_Trait": ["Block All Damage When Not Attacking"]
+}

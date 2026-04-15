@@ -2,8 +2,8 @@
   "Technique_Name": "Cursed Energy Discharge",
   "Rarity": "Special Grade",
   "Has_Domain": false,
-  "skills": ["Granite Blast", "Refined Beam"],
-  "Skill_Cost": [10, 15],
+  "skills": ["Granite Blast", "Refined Beam", "Desert."],
+  "Skill_Cost": [10, 15, 15],
   "Cursed_Energy_Trait_Exist": false,
   "Cursed_Energy_Trait": null
 }
