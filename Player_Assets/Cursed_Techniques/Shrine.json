@@ -1,0 +1,10 @@
+{
+  "Technique_Name": "Shrine",
+  "Rarity": "Special Grade",
+  "Has_Domain": true,
+  "Domain_Name": "Malevolent Shrine",
+  "skills": ["Cleave", "Dismantle", "Spiderweb"],
+  "Skill_Cost": [10,12, 15],
+  "Cursed_Energy_Trait_Exist": false,
+  "Cursed_Energy_Trait": null
+}

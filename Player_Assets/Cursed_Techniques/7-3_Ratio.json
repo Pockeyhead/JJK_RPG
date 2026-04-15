@@ -2,6 +2,7 @@
   "Technique_Name": "7:3 Ratio",
   "Rarity": "Grade 1",
   "Has_Domain": false,
+  "Domain_Name": null,
   "skills": ["Ratio Slash", "Collapse"],
   "Skill_Cost": [10, 50],
   "Cursed_Energy_Trait_Exist": false,

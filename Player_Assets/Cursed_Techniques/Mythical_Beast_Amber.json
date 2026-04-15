@@ -2,6 +2,7 @@
   "Technique_Name": "Mythical Beast Amber",
   "Rarity": "Special Grade",
   "Has_Domain": false,
+  "Domain_Name": null,
   "skills": ["Focused Shock", "Release Technique"],
   "Skill_Cost": [10, 100],
   "Cursed_Energy_Trait_Exist": true,
