@@ -1,0 +1,10 @@
+{
+  "Technique_Name": "Projection Sorcery (32 Frames)",
+  "Rarity": "Grade 1",
+  "Has_Domain": false,
+  "Domain_Name": null,
+  "skills": ["Rotoscope", "Smear Frame"],
+  "Skill_Cost": [15, 12],
+  "Cursed_Energy_Trait_Exist": false,
+  "Cursed_Energy_Trait": null
+}
