@@ -1,8 +1,8 @@
 {
   "Technique_Name": "Projection Sorcery (32 Frames)",
   "Rarity": "Grade 1",
-  "Has_Domain": false,
-  "Domain_Name": null,
+  "Has_Domain": true,
+  "Domain_Name": "Time Cell Moon Palace",
   "skills": ["Rotoscope", "Smear Frame"],
   "Skill_Cost": [15, 12],
   "Cursed_Energy_Trait_Exist": false,
