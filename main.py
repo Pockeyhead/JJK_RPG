@@ -36,21 +36,17 @@ class GameMenu(ctk.CTk):
         print("Game Started!")
 
     def open_settings(self):
-        # 1. Check if settings is already open to avoid crashes
         if hasattr(self, "settings_window") and self.settings_window is not None and self.settings_window.winfo_exists():
             self.settings_window.focus()
             return
 
-        # 2. Create the window
         self.settings_window = ctk.CTkToplevel(self)
         self.settings_window.geometry("400x350")
         self.settings_window.title("Settings")
         
-        # 3. Focus management (Critical for Borderless mode)
         self.settings_window.attributes("-topmost", True)
         self.settings_window.grab_set()
 
-        # --- UI CONTENT ---
         label = ctk.CTkLabel(self.settings_window, text="Settings Menu", font=("Arial", 20))
         label.pack(pady=15)
         
@@ -70,7 +66,6 @@ class GameMenu(ctk.CTk):
         slider = ctk.CTkSlider(self.settings_window, from_=0, to=100)
         slider.pack(pady=10)
 
-        # 4. THE CLOSE BUTTON (Specifically destroys only this window)
         self.close_btn = ctk.CTkButton(
             self.settings_window, 
             text="Close", 
@@ -79,64 +74,11 @@ class GameMenu(ctk.CTk):
         self.close_btn.pack(pady=20)
 
     def close_settings_menu(self):
-        """Safely closes only the settings window."""
         if self.settings_window:
             self.settings_window.destroy()
-            self.settings_window = None  # Reset variable
-            self.lift()                  # Bring main menu back to front
-            self.focus_force()           # Ensure main menu is clickable again
-
-    def open_settings(self):
-        # 1. Check if settings is already open to avoid crashes
-        if hasattr(self, "settings_window") and self.settings_window is not None and self.settings_window.winfo_exists():
-            self.settings_window.focus()
-            return
-
-        # 2. Create the window
-        self.settings_window = ctk.CTkToplevel(self)
-        self.settings_window.geometry("400x350")
-        self.settings_window.title("Settings")
-        
-        # 3. Focus management (Critical for Borderless mode)
-        self.settings_window.attributes("-topmost", True)
-        self.settings_window.grab_set()
-
-        # --- UI CONTENT ---
-        label = ctk.CTkLabel(self.settings_window, text="Settings Menu", font=("Arial", 20))
-        label.pack(pady=15)
-        
-        mode_label = ctk.CTkLabel(self.settings_window, text="Window Mode:", font=("Arial", 12))
-        mode_label.pack(pady=(10, 0))
-
-        mode_selector = ctk.CTkSegmentedButton(
-            self.settings_window, 
-            values=["Windowed", "Borderless"],
-            command=self.set_display_mode
-        )
-        mode_selector.set(self.current_mode) 
-        mode_selector.pack(pady=10, padx=20)
-
-        vol_label = ctk.CTkLabel(self.settings_window, text="Volume:", font=("Arial", 12))
-        vol_label.pack(pady=(10, 0))
-        slider = ctk.CTkSlider(self.settings_window, from_=0, to=100)
-        slider.pack(pady=10)
-
-        # 4. THE CLOSE BUTTON (Specifically destroys only this window)
-        self.close_btn = ctk.CTkButton(
-            self.settings_window, 
-            text="Close", 
-            command=self.close_settings_menu
-        )
-        self.close_btn.pack(pady=20)
-
-    def close_settings_menu(self):
-        """Safely closes only the settings window."""
-        if self.settings_window:
-            self.settings_window.destroy()
-            self.settings_window = None  # Reset variable
-            self.lift()                  # Bring main menu back to front
-            self.focus_force()           # Ensure main menu is clickable again
-
+            self.settings_window = None  
+            self.lift()                 
+            self.focus_force() 
 
     def quitgame(self):
         app.quit()
