@@ -18,7 +18,7 @@ class GameMenu(ctk.CTk):
         self.deiconify() 
 
         # Title Label
-        self.label = ctk.CTkLabel(self, text="Project Kaisen", font=("Impact", 30))
+        self.label = ctk.CTkLabel(self, text="Project Kaisen", font=("Impact", 50))
         self.label.place(relx=0.5, rely=0.2, anchor="center")
 
         # Start Button
