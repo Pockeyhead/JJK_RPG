@@ -1,57 +1,40 @@
 import customtkinter as ctk
+from Utilities.Tools.Global_Menu import GlobalMenu
 
 class CharacterCreator(ctk.CTkFrame):
     def __init__(self, parent):
         super().__init__(parent, fg_color="transparent")
         self.pack(expand=True, fill="both")
-        self.parent = parent
+        self.parent = parent 
 
-        self.menu_dropdown = ctk.CTkOptionMenu(
-            self,
-            values=["≡", "Settings", "Back to Main Menu", "Quit Game"],
-            command=self.menu_handler,
-            width=60,
-            height=40,
-            font=("Arial", 25),
-            fg_color="#333333",
-            button_color="#333333",
-            button_hover_color="#555555",
-            dropdown_hover_color="#444444"
-        )
-        self.menu_dropdown.set("≡")
-        self.menu_dropdown.place(relx=0.98, rely=0.02, anchor="ne")
+        # --- Import the Global Menu ---
+        self.nav_menu = GlobalMenu(self, self.parent)
 
-        self.title_label = ctk.CTkLabel(
-            self, 
-            text="Character Creation", 
-            font=("Arial", 32, "bold")
-        )
-        self.title_label.pack(pady=(60, 20))
+        # --- UI Elements ---
+        self.title_label = ctk.CTkLabel(self, text="Character Creation", font=("Arial", 32, "bold"))
+        self.title_label.pack(pady=(60, 30))
 
-        self.name_entry = ctk.CTkEntry(
-            self, 
-            placeholder_text="Enter Character Name...", 
-            width=300, 
-            height=40
-        )
+        # Name Input
+        self.name_label = ctk.CTkLabel(self, text="Character Name", font=("Arial", 16))
+        self.name_label.pack(pady=(10, 5))
+        self.name_entry = ctk.CTkEntry(self, placeholder_text="Enter Name...", width=300)
         self.name_entry.pack(pady=10)
 
-        self.desc_label = ctk.CTkLabel(
-            self, 
-            text="   E", 
-            font=("Arial", 14, "italic")
+        # Role Selection
+        self.role_label = ctk.CTkLabel(self, text="Select Your Path", font=("Arial", 16))
+        self.role_label.pack(pady=(20, 5))
+        self.role_var = ctk.StringVar(value="Sorcerer")
+        self.role_selector = ctk.CTkSegmentedButton(
+            self,
+            values=["Sorcerer", "Curse User", "Reincarnated Sorcerer"],
+            variable=self.role_var,
+            width=450,
+            height=40
         )
-        self.desc_label.pack(pady=10)
+        self.role_selector.pack(pady=10)
 
-    def menu_handler(self, choice):
-        if choice == "Settings":
-            self.parent.open_settings()
-            
-        elif choice == "Back to Main Menu":
-            self.destroy()
-            self.parent.show_menu()
-            
-        elif choice == "Quit Game":
-            self.parent.quit()
-        
-        self.menu_dropdown.set("≡")
+        self.confirm_btn = ctk.CTkButton(self, text="Continue", fg_color="#2c5d33", command=self.save)
+        self.confirm_btn.pack(pady=40)
+
+    def save(self):
+        print(f"Saving: {self.name_entry.get()} as {self.role_var.get()}")
