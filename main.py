@@ -1,6 +1,3 @@
-import sys
-import os
-import time
 from Main_Game import game
 from Main_Game.character_creation import CharacterCreator
 from Utilities.Return_Tools import Technique_Info_Scanner, Trait_Info_Scanner
@@ -43,13 +40,20 @@ class GameMenu(ctk.CTk):
         self.overrideredirect(False)
         self.state('normal')
         self.update()
-            
+
+        w, h = self.winfo_screenwidth(), self.winfo_screenheight()
+
         if mode == "Borderless":
-            self.overrideredirect(True) 
-            w, h = self.winfo_screenwidth(), self.winfo_screenheight()
+            self.overrideredirect(True)
             self.geometry(f"{w}x{h}+0+0")
-            
+
+        elif mode == "Windowed Fullscreen":
+            self.state('zoomed')
+
         elif mode == "Windowed":
+            self.geometry("800x600+100+100")
+
+        else:
             self.geometry("800x600+100+100")
 
     def show_menu(self):

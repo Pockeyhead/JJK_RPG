@@ -21,10 +21,10 @@ class SettingsWindow(ctk.CTkToplevel):
         # Mode Selector
         self.mode_selector = ctk.CTkSegmentedButton(
             self, 
-            values=["Windowed", "Borderless"],
+            values=["Windowed", "Windowed Fullscreen", "Borderless"],
             command=self.parent.set_display_mode # Calls back to main app
         )
-        self.mode_selector.set(self.parent.current_mode) 
+        self.mode_selector.set(self.parent.current_mode)
         self.mode_selector.pack(pady=10, padx=20)
 
         vol_label = ctk.CTkLabel(self, text="Volume:", font=("Arial", 12))
