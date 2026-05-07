@@ -5,7 +5,7 @@ import random
 TECH_PATH = "Player_Assets/Cursed_Techniques"
 TRAIT_PATH = "Player_Assets/Traits"
 
-CLANS = ["Gojo", "Zenin", "Kamo", "Inumaki", "Fujiwara", "Abe", "Sugawara", "Taira", "Minamoto", "Itadori", "Fushiguro", "Okkotsu", "Iori", "Mei", "Kusakabe", "Nanami", "Sukuna", "No clan"]
+CLANS = ["Gojo", "Zenin", "Kamo", "Inumaki", "Fujiwara", "Abe", "Sugawara", "Taira", "Minamoto", "Itadori", "Fushiguro", "Okkotsu", "Iori", "Mei", "Kusakabe", "Nanami", "Sukuna", "None"]
 
 # Multipliers: Higher number = Higher chance for specific files
 INFLUENCES = {
