@@ -1,0 +1,10 @@
+{
+  "Technique_Name": "Soul King",
+  "Rarity": "Special Grade",
+  "Has_Domain": false,
+  "Domain_Name": null,
+  "skills": ["Soul Dismantle", "Unknown Slash"],
+  "Skill_Cost": [20, 20],
+  "Cursed_Energy_Trait_Exist": false,
+  "Cursed_Energy_Trait": [null]
+}
