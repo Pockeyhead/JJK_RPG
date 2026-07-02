@@ -50,3 +50,51 @@ def get_weighted_roll(directory, clan):
     
     # Extracting the string from the list returned by choices
     return random.choices(options, weights=weights, k=1)[0]
+
+# =========================================================
+# BUILD SYSTEM (GLOBAL + STAT BONUSES)
+# =========================================================
+
+BUILDS = [
+    "Athletic",
+    "Scrawny",
+    "Allrounder",
+    "Powerhouse",
+    "Reactive"
+]
+
+BUILD_STAT_BONUSES = {
+    "Athletic": {
+        "Strength": 2,
+        "Endurance": 1
+    },
+    "Scrawny": {
+        "Strength": -3,
+        "Perception": 2,
+        "Endurance": -1,
+        "Intelligence": 2
+    },
+    "Allrounder": {
+        "Strength": 1,
+        "Agility": 1,
+        "Intelligence": 1,
+        "Endurance": 1
+    },
+    "Powerhouse": {
+        "Endurance": 3,
+        "Willpower": 1,
+        "Strength": 1
+    },
+    "Reactive": {
+        "Agility": 2,
+        "Perception": 2
+    }
+}
+
+
+def roll_build():
+    return random.choice(BUILDS)
+
+
+def get_build_bonuses(build_name):
+    return BUILD_STAT_BONUSES.get(build_name, {})
